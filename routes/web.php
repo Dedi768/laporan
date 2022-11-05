@@ -7,6 +7,7 @@ use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\KeluarController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PenilaianController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -31,7 +32,8 @@ Route::get('laporan/hapus/{id}',[LaporanController::class,'destroy'])->middlewar
 Route::post('laporan/modify',[LaporanController::class,'update'])->middleware('auth');
 Route::get('laporan/edit/{id}',[LaporanController::class,'edit'])->middleware('auth');
 
-
+Route::post('laporan/validasi',[PenilaianController::class,'validasi'])->middleware('auth');
+Route::get('laporan/validasi/{id}',[LaporanController::class,'showValidation'])->middleware('auth');
 
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');

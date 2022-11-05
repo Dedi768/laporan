@@ -4,14 +4,14 @@
 
 @section('main')
     <div class="ml-3 mt-3">
-        <div class="card card-primary">
+        <div class="card card-success">
             <div class="card-header">
                 <h3 class="card-title">Tambah Laporan</h3>
             </div>
 
             <form action="/laporan/tambah" method="POST">
                 @csrf
-                <div class="card=body">
+                <div class="card-body">
                     <div class="form-group">
                         <label for="nama">Nama</label>
                         <input type="text" class="form-control" id="nama" name="nama"
@@ -45,13 +45,16 @@
                         <input type="text" class="form-control" id="tanggal" name="tanggal"
                             value="{{ old('tanggal') }}" placeholder="Masukkan Tanggal">
                             
-
+                        
                     </div>
+                  
                 </div>
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary"> Create</button>
+                    <button type="submit" class="btn btn-success"> Create</button>
                 </div>
             </form>
         </div>
             @endsection
+
+            <script src="{{ asset('js/date.js') }}"></script>

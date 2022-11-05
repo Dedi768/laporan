@@ -11,7 +11,10 @@
         </div>
 
         <div class="card-body">
-            <a href="/laporan/create" class="btn btn-primary mb-2">Buat Laporan</a>
+            @if(Auth::user()->role == 2)
+            
+            <a href="/laporan/create" class="btn btn-success mb-2">Buat Laporan</a>
+            @endif
             <table class="table table-bordered">
                 <thead>
                     <tr>
@@ -45,12 +48,22 @@
                         </td>
 
                         <td>
-                            <a href="/laporan/hapus/{{$item->id}}" class="btn btn-danger mb-2">Hapus</a>
-                            <a href="/laporan/edit/{{$item->id}}" class="btn btn-warning mb-2">Edit</a>
-                            @if(Auth::user()->role == 1)
-                            <a href="/laporan/hapus/{{$item->id}}" class="btn btn-success mb-2">Validasi</a>
+                            @if(Auth::user()->role == 2  )
+                                @if($item->status =='belum divalidasi')
+                                <a href="/laporan/hapus/{{$item->id}}" class="btn btn-danger mb-2">Hapus</a>
+
+                                <a href="/laporan/edit/{{$item->id}}" class="btn btn-warning mb-2">Edit</a>
+                                @else
+                                <a href="/laporan/print/{{$item->id}}" class="btn btn-success mb-2">Print</a> 
+                                @endif
+                            @endif
+                            @if(Auth::user()->role == 1 && $item->status =='belum divalidasi')
+                            <a href="/laporan/validasi/{{$item->id}}" class="btn btn-success mb-2">Validasi</a>
+                            @else
+                             
                             @endif
                         </td>
+                        
                     </tr>
                     @endforeach
                 </tbody>

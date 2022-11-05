@@ -80,7 +80,10 @@ class LaporanController extends Controller
     {
         $laporan =Laporan::find($id);
         return view('laporan.validation', compact('laporan'));
+
     }
+
+   
     /**
      * Update the specified resource in storage.
      *
@@ -96,8 +99,7 @@ class LaporanController extends Controller
             'nip' => $request->nip,
             'jabatan' => $request->jabatan,
             'kegiatan' => $request->kegiatan,
-            'tanggal' => $request->tanggal,
-            'status'=> $request->status
+            'tanggal' => $request->tanggal
         ]);
         
         return redirect()->route('laporan');

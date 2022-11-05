@@ -28,7 +28,7 @@
                     <label>Password</label>
                     <input type="password" name="password" class="form-control" placeholder="Password" required="">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Log In</button>
+                <button type="submit" class="btn btn-success btn-block">Log In</button>
                 <hr>
                 <p class="text-center">Belum punya akun? <a href="/register">Register</a> sekarang!</p>
             </form>

@@ -43,7 +43,7 @@
                     </select>
                   </div>
                 
-                <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-user"></i> Register</button>
+                <button type="submit" class="btn btn-success btn-block"><i class="fa fa-user"></i> Register</button>
                 <hr>
                 <p class="text-center">Sudah punya akun silahkan <a href="/login">Login Disini!</a></p>
             </form>
