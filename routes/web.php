@@ -59,4 +59,7 @@ Route::get('/visi', function () {
 Route::get('/peraturan', function () {
     return view('peraturan');
 });
+Route::get('/panduan', function () {
+    return view('panduan');
+});
 
