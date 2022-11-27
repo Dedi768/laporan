@@ -62,4 +62,18 @@ Route::get('/peraturan', function () {
 Route::get('/panduan', function () {
     return view('panduan');
 });
-
+Route::get('/bidang1', function () {
+    return view('bidang1');
+});
+Route::get('/bidang2', function () {
+    return view('bidang2');
+});
+Route::get('/bidang3', function () {
+    return view('bidang3');
+});
+Route::get('/bidang4', function () {
+    return view('bidang4');
+});
+Route::get('/bidang5', function () {
+    return view('bidang5');
+});
