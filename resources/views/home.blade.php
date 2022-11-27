@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>diskominfo</title>
+    <title>Diskominfo-S-PKP NON ASN</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
   </head>
@@ -30,7 +30,7 @@
             <li><a class="dropdown-item" href="/visi">Visi & Misi</a></li>
             <li><a class="dropdown-item" href="/peraturan">Peraturan Pemerintah</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="/tutorial">TUTORIAL</a></li>
+            <li><a class="dropdown-item" href="/panduan">Panduan</a></li>
           </ul>
         </li>
         <li class="nav-item">
