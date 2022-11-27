@@ -59,55 +59,7 @@
                 <div class="card-body">
                 <form action="/laporan/validasi" method="POST">
                 @csrf
-                <input type="hidden" name="id_laporan" value="{{ $laporan->id}}">
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1">Disiplin Kehadiran</label>
-        
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="disiplin_waktu" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Baik</label>
-                      </div>
-
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="disiplin_waktu" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Sedang</label>
-                      </div>
-
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="disiplin_waktu" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Cukup</label>
-                      </div>
-
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="disiplin_waktu" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Kurang</label>
-                      </div>
-                  </div>
-
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect1">Kerjasama</label>
-        
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="kerjasama" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Baik</label>
-                      </div>
-
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="kerjasama" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Sedang</label>
-                      </div>
-
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="kerjasama" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Cukup</label>
-                      </div>
-
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="kerjasama" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Kurang</label>
-                      </div>
-                  </div>
-
+               
                   
 
                 <div class="card-footer">

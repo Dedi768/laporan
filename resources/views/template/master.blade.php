@@ -190,6 +190,8 @@
     <script src="{{ asset('js/adminlte.min.js?v=3.2.0') }}"></script>
 
     <script src="{{ asset('js/demo.js') }}"></script>
+
+    
 </body>
 
 </html>
