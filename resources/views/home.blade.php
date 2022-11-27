@@ -39,10 +39,10 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/bidang1">Bidang Penyelenggaraan Informasi dan Komunikasi Publik</a></li>
-            <li><a class="dropdown-item" href="/">Bidang Keamanan Informasi dan Persandian</a></li>
-            <li><a class="dropdown-item" href="/">Bidang Teknologi Informasi dan Komunikasi</a></li>
-            <li><a class="dropdown-item" href="/">Bidang Aplikasi Informatika</a></li>
-            <li><a class="dropdown-item" href="/">Bidang Statistik</a></li>
+            <li><a class="dropdown-item" href="/bidang2">Bidang Keamanan Informasi dan Persandian</a></li>
+            <li><a class="dropdown-item" href="/bidang3">Bidang Teknologi Informasi dan Komunikasi</a></li>
+            <li><a class="dropdown-item" href="/bidang4">Bidang Aplikasi Informatika</a></li>
+            <li><a class="dropdown-item" href="/bidang5">Bidang Statistik</a></li>
           </ul>
         </li>
         <li class="nav-item">
