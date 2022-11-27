@@ -33,12 +33,13 @@
             <li><a class="dropdown-item" href="/panduan">Panduan</a></li>
           </ul>
         </li>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Unit Kerja
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/bidang1">Bidang Penyelenggaraan Informasi dan Komunikasi Publik</a></li>
+            <li><a class="dropdown-item" href="/#1">Bidang Penyelenggaraan Informasi dan Komunikasi Publik</a></li>
             <li><a class="dropdown-item" href="/">Bidang Keamanan Informasi dan Persandian</a></li>
             <li><a class="dropdown-item" href="/">Bidang Teknologi Informasi dan Komunikasi</a></li>
             <li><a class="dropdown-item" href="/">Bidang Aplikasi Informatika</a></li>
@@ -46,30 +47,13 @@
           </ul>
         </li>
         <li class="nav-item">
-        <li class="nav-item">
           <a class="nav-link active" href="/login">LOGIN</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="container">
-<div class="hero-image">
-  <div class="hero-text">
-    <h1 style="font-size:50px">Visi & Misi</h1>
-    <div class="container">
-    <h1 class="text-start" style="font-size:20px">Visi</h1>
-    <p class="text-start">"Terwujudnya Masyarakat Kabupaten Bandung Yang Bangkit, Edukatif, Dinamis, Agamis dan Sejahtera"</p>
-    <h1 class="text-start" style="font-size:20px">Misi</h1>
-    <p class="text-start">     1. Membangkitkan daya saing daerah.</p>
-    <p class="text-start">     2. Menyediakan layanan pendidikan dan kesehatan yang berkualitas dan merata</p>
-    <p class="text-start">     3. Mengoptimalkan pembangunan daerah berbasis partisipasi masyarakat yang menjunjung tinggi kreatiftas dalam bingkai kearifan lokal dan berwawasan lingkungan.</p>
-    <p class="text-start">     4. Mengoptimalkan tata kelola pemerintahan melalui birokrasi yang profesional, dan tata kehidupan masyarakat yang berlandaskan nilai-nilai keagamaan.</p>
-    <p class="text-start">     5. Meningkatkan kesejahteraan masyarakat dengan prinsip keadilan dan keberpihakan pad kelompok masyarakat rendah.</p>
-    </div>
-  </div>
-</div>
-</div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
   </body>

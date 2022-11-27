@@ -33,6 +33,19 @@
             <li><a class="dropdown-item" href="/panduan">Panduan</a></li>
           </ul>
         </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Unit Kerja
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="/bidang1">Bidang Penyelenggaraan Informasi dan Komunikasi Publik</a></li>
+            <li><a class="dropdown-item" href="/">Bidang Keamanan Informasi dan Persandian</a></li>
+            <li><a class="dropdown-item" href="/">Bidang Teknologi Informasi dan Komunikasi</a></li>
+            <li><a class="dropdown-item" href="/">Bidang Aplikasi Informatika</a></li>
+            <li><a class="dropdown-item" href="/">Bidang Statistik</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
         <li class="nav-item">
           <a class="nav-link active" href="/login">LOGIN</a>
         </li>
@@ -41,7 +54,7 @@
   </div>
 </nav>
 <div class="container">
-<div class="card" style="width: 18rem;">
+<div class="card" style="width:400px;">
   <div class="card-body">
     <h5 class="card-title">Berdasarkan Peraturan Bupati Bandung No.107 tahun 2019</h5>
     <h6 class="card-subtitle mb-2 text-muted">tentang Tenaga Non Aparatur Sipil Negara</h6>
