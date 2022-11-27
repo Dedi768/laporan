@@ -33,12 +33,13 @@
             <li><a class="dropdown-item" href="/panduan">Panduan</a></li>
           </ul>
         </li>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Unit Kerja
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/bidang1">Bidang Penyelenggaraan Informasi dan Komunikasi Publik</a></li>
+            <li><a class="dropdown-item" href="/">Bidang Penyelenggaraan Informasi dan Komunikasi Publik</a></li>
             <li><a class="dropdown-item" href="/">Bidang Keamanan Informasi dan Persandian</a></li>
             <li><a class="dropdown-item" href="/">Bidang Teknologi Informasi dan Komunikasi</a></li>
             <li><a class="dropdown-item" href="/">Bidang Aplikasi Informatika</a></li>
@@ -46,21 +47,20 @@
           </ul>
         </li>
         <li class="nav-item">
-        <li class="nav-item">
-          <a class="nav-link active" href="/login">LOGIN</a>
+          <a class="nav-link active" href="/login">Login</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<div class="container">
-<div class="card" style="width:400px;">
+<div class="container" style="margin-top: 40px;">
+<div class="card" style="width:430px;">
   <div class="card-body">
     <h5 class="card-title">Berdasarkan Peraturan Bupati Bandung No.107 tahun 2019</h5>
-    <h6 class="card-subtitle mb-2 text-muted">tentang Tenaga Non Aparatur Sipil Negara</h6>
-    <h6 class="card-subtitle mb-2 text-muted">pasal 5 - Evaluasi Kinerja</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Tentang Tenaga Non Aparatur Sipil Negara</h6>
+    <h6 class="card-subtitle mb-2 text-muted">Pasal 5 - Evaluasi Kinerja</h6>
     <p class="card-text">(1) Evaluasi kinerja Tenaga Non ASN dilakukan setiap bulan dengan memuat unsur penilaian:</p>
-    <p class="card-text">a. kinerja; dan b. perilaku kerja</p>
+    <p class="card-text">a. kinerja; dan</p>
     <p class="card-text">b. perilaku kerja</p>
     <p class="card-text">(2) Evaluasi kinerja sebagaimana dimaksud ayat (1) berbentuk laporan pekerjaan yang dilakukan Tenaga Non ASN setiap bulan sesuai tugas yang ditetapkan dalam perjanjian kerja. </p>
     <p class="card-text">(3) Laporan pekerjaan sebagaimana dimaksud ayat (2) merupakan dasar pembayaran honorarium Tenaga Non ASN. </p>
