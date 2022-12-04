@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="{{ asset('/fontawesome-free/css/all.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/adminlte.min.css?v=3.2.0') }}">
+    <link rel="stylesheet" href="{{ asset('css\datepicker.css') }}">
+    <link rel="stylesheet" type="text/css" href="css\bootstrap.css">
     <script nonce="06146e89-4810-4a50-846d-d253073e7363">
         (function(w, d) {
             ! function(a, e, t, r) {
@@ -125,7 +127,8 @@
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex">
                     
                     <div class="info">
-                        <a href="#" class="d-block">{{Auth::user()->name}}</a>
+                        <a style="color:white" class="d-block">{{Auth::user()->name}}</a>
+                        <a style="color:white" class="d-block">{{Auth::user()->nip}}</a>
                         
                     </div>
                 </div>
@@ -144,14 +147,23 @@
                                 </p>
                             </a>
                         </li>
-
-
                         
-
-
-
+                        @if (Auth::user()->role == 2)
+                        <nav class="mt-2">
+                            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                                data-accordion="false">
+        
+                                <li class="nav-item">
+                                    <a href="/laporan/print_form" class="nav-link">
+                                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                                        <p>
+                                            Cetak Laporan
+                                        </p>
+                                    </a>
+                                </li>
                     </ul>
                 </nav>
+                @endif
 
             </div>
 
@@ -190,6 +202,8 @@
     <script src="{{ asset('js/adminlte.min.js?v=3.2.0') }}"></script>
 
     <script src="{{ asset('js/demo.js') }}"></script>
+
+    <script src="{{ asset('js\datepicker.js') }}"></script>
 
     
 </body>

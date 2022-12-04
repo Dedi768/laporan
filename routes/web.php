@@ -9,6 +9,7 @@ use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PenilaianController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\EmployeeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,9 @@ Route::get('laporan/create',[LaporanController::class,'create'])->middleware('au
 Route::get('laporan/hapus/{id}',[LaporanController::class,'destroy'])->middleware('auth');
 Route::post('laporan/modify',[LaporanController::class,'update'])->middleware('auth');
 Route::get('laporan/edit/{id}',[LaporanController::class,'edit'])->middleware('auth');
+Route::get('laporan/print',[LaporanController::class,'print'])->middleware('auth');
+Route::get('laporan/print_form',[LaporanController::class,'printform'])->middleware('auth');
+Route::get('laporan/print_pertanggal/{tglawal}/{tglakhir}',[LaporanController::class,'printpertanggal']);
 
 Route::post('laporan/validasi',[PenilaianController::class,'validasi'])->middleware('auth');
 Route::get('laporan/validasi/{id}',[LaporanController::class,'showValidation'])->middleware('auth');
@@ -77,3 +81,4 @@ Route::get('/bidang4', function () {
 Route::get('/bidang5', function () {
     return view('bidang5');
 });
+

@@ -1,0 +1,50 @@
+.body{
+    width: 100%;
+}
+.none-border{
+    border : hidden; border-collapse:collapse;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.container{
+    margin-bottom: 25px;
+    
+}
+.text-container{
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+.kop-container{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    margin-bottom: 25px;
+
+   
+}
+.b-bottom{
+    margin: auto;
+    text-align: center;
+    border-bottom-style : double;
+    border-width: medium;
+   
+}
+
+.b-container{
+    margin-left: 25px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+td,th{
+    padding-left: 5px;
+}
+
+th{
+    font-weight: bold;
+    font-size: large;
+    
+}

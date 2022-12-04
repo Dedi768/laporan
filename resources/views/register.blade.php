@@ -28,13 +28,19 @@
                     <label><i class="fa fa-user"></i> Name</label>
                     <input type="text" name="name" class="form-control" placeholder="name" required="">
                 </div>
+
+                <div class="form-group">
+                    <label><i class="fa fa-fingerprint"></i> NIP</label>
+                    <input type="text" name="nip" class="form-control" placeholder="Nip" required="">
+                </div>
+
                 <div class="form-group">
                     <label><i class="fa fa-key"></i> Password</label>
                     <input type="password" name="password" class="form-control" placeholder="Password" required="">
                 </div>
 
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Role</label>
+                    <label for="exampleFormControlSelect1"><i class="fas fa-user-circle"></i> Role</label>
                     <select name="role" class="form-control" id="exampleFormControlSelect1">
                       <option>-Pilih Role-</option> 
                       <option value="1">Atasan</option>

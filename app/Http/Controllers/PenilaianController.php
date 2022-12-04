@@ -12,8 +12,7 @@ class PenilaianController extends Controller
     {   
         $penilaian = new Penilaian;
         $penilaian->id_laporan=$request->input('id_laporan');
-        $penilaian->disiplin_waktu=$request->input('disiplin_waktu');
-        $penilaian->kerjasama=$request->input('kerjasama');
+        
         $penilaian->save();
 
         Laporan::where('id', $request->id_laporan)

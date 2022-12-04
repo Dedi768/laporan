@@ -15,9 +15,12 @@ class RegisterController extends Controller
     
     public function actionregister(Request $request)
     {
+        $jabatan=($request->role == 1) ? "Atasan" : "Pegawai";
         $user = User::create([
             'email' => $request->email,
             'name' => $request->name,
+            'nip' => $request->nip,
+            'jabatan'=>$jabatan,
             'role' => $request->role,
             'password' => Hash::make($request->password)
             

@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('penilaians', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('id_laporan');
-            $table->string('disiplin_waktu');
-            $table->string('kerjasama');
+            
            
            
             $table->timestamps();
