@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Laporan;
+use App\Models\User;
 use DB;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,7 @@ class LaporanController extends Controller
     public function index()
     {   
         if (Auth::user()->role == 1){
-            $laporan = Laporan::orderBy('tanggal', 'desc')->get();
+            $laporan = Laporan::where('atasan',Auth::user()->id)->orderBy('tanggal', 'desc')->get();
         }else{
             $laporan = Laporan::where('nip',Auth::user()->nip)->orderBy('tanggal', 'desc')->get();
         }
@@ -49,12 +50,13 @@ class LaporanController extends Controller
         if (Auth::user()->role == 1){
             return redirect('/laporan');;
         }
+        $atasan=User::where('id',Auth::user()->atasan)->first();
         $printtanggal = Laporan::whereRaw("nip= ? AND tanggal >= ? AND tanggal <= ? ",[Auth::user()->nip,$tglawal ,$tglakhir])->orderBy('tanggal','asc')->get();
-        $allSessions = session()->all();
+        
 
         //status= 'divalidasi' AND 
         $period = LaporanController::getCurrentPeriod(); 
-        return view('laporan.print_pertanggal',compact('printtanggal','period'));
+        return view('laporan.print_pertanggal',compact('printtanggal','period','atasan'));
         
    }    
 
@@ -93,6 +95,7 @@ class LaporanController extends Controller
         $laporan->jabatan=Auth::user()->jabatan;
         $laporan->kegiatan=$request->input('kegiatan');
         $laporan->tanggal=$request->input('tanggal');
+        $laporan->atasan=Auth::user()->atasan;
         $laporan->tanggal= date("Y-m-d", strtotime($laporan->tanggal));
         
         $laporan->status='belum divalidasi';

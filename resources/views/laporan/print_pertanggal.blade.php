@@ -42,7 +42,7 @@
         <tr>
             <td>Perangkat Daerah</td>
             <td>:</td>
-            <td>DISKOMINFO</td>
+            <td>{{ Auth::user()->perangkat_daerah}}</td>
         </tr>
         <tr>
             <td>Bulan/TA</td>
@@ -96,8 +96,8 @@
      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
      <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-     <tr><td>{{ Auth::user()->name }}</td><td>NAMA</td></tr>
-     <tr><td>&nbsp;</td><td>NIP</td></tr>
+     <tr><td>{{ Auth::user()->name }}</td><td>{{ $atasan->name }}</td></tr>
+     <tr><td>{{ Auth::user()->nip }}&nbsp;</td><td>{{ $atasan->nip }}</td></tr>
     </tbody></table>
 </div>
 </div>

@@ -35,6 +35,29 @@
                 </div>
 
                 <div class="form-group">
+                    <label><i class="fas fa-landmark"></i> Perangkat Daerah</label>
+                    <select name="perangkat_daerah" class="form-control" id="exampleFormControlSelect1">
+                        <option>-Pilih Perangkat Daerah-</option> 
+                        <option value="Bidang Penyelenggaraan Informasi dan Komunikasi Publik">Bidang Penyelenggaraan Informasi dan Komunikasi Publik</option>
+                        <option value="Bidang Keamanan Informasi dan Persandian">Bidang Keamanan Informasi dan Persandian</option>
+                        <option value="Bidang Teknologi Informasi dan Komunikasi">Bidang Teknologi Informasi dan Komunikasi</option>
+                        <option value="Bidang Aplikasi Informatika">Bidang Aplikasi Informatika</option>
+                        <option value="Bidang Statistik">Bidang Statistik</option>
+                      </select>
+                </div>
+
+                <div class="form-group">
+                    <label><i class="fas fa-user-tie"></i> Atasan</label>
+                    <select name="atasan" class="form-control" id="exampleFormControlSelect1">
+                        <option value="0">-Pilih Atasan-</option>
+                        @foreach ($leaderlist as $leader)
+                        <option value="{{ $leader->id }}">{{ $leader->name }}</option>
+                        @endforeach
+                        
+                      </select>
+                </div>
+
+                <div class="form-group">
                     <label><i class="fa fa-key"></i> Password</label>
                     <input type="password" name="password" class="form-control" placeholder="Password" required="">
                 </div>
