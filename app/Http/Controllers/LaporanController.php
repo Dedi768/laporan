@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LaporanController extends Controller
 {
+    public static $month_list= array('','Januari','Februari','Maret','April','Mei','Juni','Juli','Agustus','September','Oktober','November','Desember');
     /**
      * Display a listing of the resource.
      *
@@ -48,15 +49,22 @@ class LaporanController extends Controller
         if (Auth::user()->role == 1){
             return redirect('/laporan');;
         }
-        $printtanggal = Laporan::whereRaw("status= 'divalidasi' AND nip= ? AND tanggal >= ? AND tanggal <= ? ",[Auth::user()->nip,$tglawal ,$tglakhir])->orderBy('tanggal','asc')->get();
+        $printtanggal = Laporan::whereRaw("nip= ? AND tanggal >= ? AND tanggal <= ? ",[Auth::user()->nip,$tglawal ,$tglakhir])->orderBy('tanggal','asc')->get();
         $allSessions = session()->all();
 
-        
-        return view('laporan.print_pertanggal',compact('printtanggal'));
+        //status= 'divalidasi' AND 
+        $period = LaporanController::getCurrentPeriod(); 
+        return view('laporan.print_pertanggal',compact('printtanggal','period'));
         
    }    
 
-    
+    public function getCurrentPeriod()
+    {
+        $month = date('m');
+        $year = date ('Y');
+        return LaporanController::$month_list[$month].'/'.$year;
+        
+    }
 
 
     /**

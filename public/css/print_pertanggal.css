@@ -1,50 +1,8 @@
-.body{
-    width: 100%;
-}
-.none-border{
-    border : hidden; border-collapse:collapse;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.container{
-    margin-bottom: 25px;
-    
-}
-.text-container{
-    margin: auto;
-    text-align: center;
-    width: 50%;
-}
-.kop-container{
-    margin: auto;
-    text-align: center;
-    width: 80%;
-    margin-bottom: 25px;
-
-   
-}
-.b-bottom{
-    margin: auto;
-    text-align: center;
-    border-bottom-style : double;
-    border-width: medium;
-   
-}
-
-.b-container{
-    margin-left: 25px;
-}
-
-.text-center{
-    text-align: center;
-}
-
-td,th{
-    padding-left: 5px;
-}
-
-th{
-    font-weight: bold;
-    font-size: large;
-    
-}
+body {font-family: arial; background-color : #ccc }
+.rangkasurat {width : 980px;margin:0 auto;background-color : #fff;height: 29.7cm;width: 21cm;padding: 20px;}
+table {border-bottom : 3px solid #000; padding: 2px}
+.tengah {text-align : center;line-height: 10px;padding-left: 1px;}
+.kop {font-size: 10;text-align: center;padding-left: 2cm;padding-right: 2cm;}
+.identitas {border-bottom: 0;}
+.tableizer-table {width:680px;border-color: #000;}
+.tandatangan {width:680px;border-bottom:0;padding-bottom: 3cm;padding-top: 5cm;text-align: center;}

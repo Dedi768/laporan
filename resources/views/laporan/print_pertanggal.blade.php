@@ -1,128 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ asset('/css/print_pertanggal.css') }}">
-    
-    <style>
-        table.static {
-            position: relative;
-            /* left: 3%; */
-            border: 1px solid #543535;
-        }
-    </style>
-    <title>Cetak Laporan</title>
+    <title> laporan kinerja </title>
+    <style type= "text/css">
+    body {font-family: arial; background-color : #ccc }
+    .rangkasurat {width : 980px;margin:0 auto;background-color : #fff;height: 29.7cm;width: 21cm;padding: 20px;}
+    table {border-bottom : 3px solid #000; padding: 2px}
+    .tengah {text-align : center;line-height: 10px;padding-left: 1px;}
+    .kop {font-size: 10;text-align: center;padding-left: 2cm;padding-right: 2cm;}
+    .identitas {border-bottom: 0;}
+    .tableizer-table {width:680px;border-color: #000;}
+    .tandatangan {width:680px;border-bottom:0;padding-bottom: 3cm;padding-top: 5cm;text-align: center;}
+    .bold {font-weight: bold; font-size: 14px}
+     </style >
 </head>
-
 <body>
-    <div class="form-group">
-        <p align="center"><b>Laporan Pegawai Per Tanggal</b></p>
-
-        <div class="container">
-        <table class="static none-border"  align="center" rules="all">
-        
-        <tr class="none-border">
-            <td>LAMPIRAN II</td>
-            <td class="none-border">:</td> 
-            <td>PERATURAN BUPATI</td>
-        </tr>
-
-        <tr class="none-border">
-            <td>NOMOR</td>
-            <td class="none-border">:</td> 
-            <td>46 TAHUN 2020</td>
-        </tr>
-        <tr class="none-border">
-            <td>TENTANG</td>
-            <td class="none-border">:</td> 
-            <td>PERUBAHAN ATAS PERATURAN BUPATI </td>
-        </tr>
-       
-        <tr class="none-border">
-            <td></td>
-            <td class="none-border"></td> 
-            <td>NOMOR 107 TAHUN 2019 TENTANG TENAGA</td>
-        </tr>
-        
-        <tr class="none-border">
-            <td></td>
-            <td class="none-border"></td> 
-            <td>NON APARATUR SIPIL NEGARA</td>
-        </tr>
-            
-        </table>
-    </div>
-
-    <div class="text-container">
-        <p>FORMAT DAFTAR PENILAIAN PELAKSANAAN PEKERJAAN NON APARATUR SIPIL NEGARA</p>
-    </div>
-
-    <div class="kop-container">
-        <h4 class="b-bottom">KOP PERANGKAT DAERAH</h4>
-    </div>
-
-    <div class="text-container">
-        <p>FORMAT DAFTAR PENILAIAN PELAKSANAAN PEKERJAAN NON APARATUR SIPIL NEGARA</p>
-    </div>
-
-    <div class="b-container container">
-        <table class="static none-border" rules="all">
-        
-        <tr class="none-border">
+<div class = "rangkasurat">
+     <table width = "100%">
+           <tr>
+                 <td> <img src="{{ asset('/image/logo_copy.png') }}" width="120px"> </td>
+                 <td class = "tengah">
+                       <h2>PEMERINTAH DAERAH KABUPATEN BANDUNG</h2>
+                       <h2>DINAS KOMUNIKASI, INFORMATIKA DAN STATISTIK</h2>
+                       <p>Jl.Raya Soreang No.17, Pamekaran, Kec.Soreang, Kabupaten Bandung, Jawa Barat 40912</p>
+                 </td>
+            </tr>
+     </table >
+     
+<div class="kop">
+    <h1>DAFTAR PENILAIAN PELAKSANAAN PEKERJAAN NON APARATUR SIPIL NEGARA </h1>
+    <table class="identitas">
+        <tr>
             <td>Nama</td>
-            <td class="none-border">:</td> 
+            <td>:</td>
             <td>{{ Auth::user()->name }}</td>
         </tr>
-
-        <tr class="none-border">
-            <td>NIP</td>
-            <td class="none-border">:</td> 
-            <td>{{ Auth::user()->nip }}</td>
-        </tr>
-        <tr class="none-border">
+        <tr>
             <td>Jabatan</td>
-            <td class="none-border">:</td> 
-            <td>{{ Auth::user()->jabatan}}</td>
+            <td>:</td>
+            <td>{{ Auth::user()->jabatan }}</td>
         </tr>
-            
-        </table>
-    </div>
-        <table class="static mt-5" align="center" rules="all" border="1px" style="width: 95%;">
-            <tr>
-                <th>A</th>
-                <th style=" text-align: left"colspan="2">HASIL KERJA</th>
-                
-            </tr>
-            
-            <tr>
-                <th rowspan="2">No</th>
-                <th colspan="2">Uraian Pekerjaan</th>
-                
-            </tr>
+        <tr>
+            <td>Perangkat Daerah</td>
+            <td>:</td>
+            <td>DISKOMINFO</td>
+        </tr>
+        <tr>
+            <td>Bulan/TA</td>
+            <td>:</td>
+            <td>{{$period}}</td>
+        </tr>
+    </table>
+    <style type="text/css">
+        table.tableizer-table {
+            font-size: 12px;
+            border: 1px solid #CCC; 
+            font-family: Arial, Helvetica, sans-serif;
+        } 
+        .tableizer-table td {
+            padding: 4px;
+            margin: 3px;
+            border: 1px solid #CCC;
+        }
+    </style>
+    <table class="tableizer-table">
+    <thead><tr class="tableizer-firstrow"><th></th><th>&nbsp;</th></tr></thead><tbody>
+     <tr><td class="bold">A</td><td class="bold">Hasil Kinerja</td></tr>
+     <tr><td class="bold">No</td><td class="bold">Uraian Pekerjaan</td></tr>
+     @foreach ($printtanggal as $item)
+     <tr>
+        <td>{{ $loop->iteration }}</td><td> {{ $item->kegiatan }} &nbsp;</td></tr>
+     @endforeach
+     <tr><td class="bold">B</td><td class="bold">Perilaku Kerja</td></tr>
+     <tr><td>1</td><td>Disiplin Kehadiran (Baik/Sedang/Cukup/Kurang)</td></tr>
+     <tr><td>2</td><td>Kerja Sama(Baik/Sedang/Cukup/Kurang)</td></tr>
+    </tbody></table>
 
-            <tr>
-                
-                <th>Kegiatan</th>
-                <th>Tanggal</th>
-            </tr>
-            @foreach ($printtanggal as $item)
-                <tr>
-                    <td class="text-center">{{ $loop->iteration }}</td>
-                    <td>{{ $item->kegiatan }}</td>
-                    <td>{{ date("d-m-Y", strtotime($item->tanggal)) }} </td>
-                </tr>
-            @endforeach
-
-        </table>
-    </div>
-
-    <script type="text/javascript">
-        window.print();
-    </script>
+    <style type="text/css">
+        table.tandatangan {
+            font-size: 12px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .tandatangan td {
+            padding: 4px;
+            margin: 3px;
+        }
+        .tandatangan th {
+            background-color: #ffff; 
+            color: #FFF;
+            font-weight: bold;
+        }
+    </style>
+    <table class="tandatangan">
+    <thead><tr class="tableizer-firstrow"><th></th><th>&nbsp;</th></tr></thead><tbody>
+     <tr><td>YANG DINILAI</td><td>ATASAN LANGSUNG</td></tr>
+     <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+     <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+     <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+     <tr><td>{{ Auth::user()->name }}</td><td>NAMA</td></tr>
+     <tr><td>&nbsp;</td><td>NIP</td></tr>
+    </tbody></table>
+</div>
+</div>
+<script type="text/javascript">
+    window.print();
+</script>
 </body>
-
 </html>
