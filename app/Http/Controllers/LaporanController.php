@@ -55,15 +55,16 @@ class LaporanController extends Controller
         
 
         //status= 'divalidasi' AND 
-        $period = LaporanController::getCurrentPeriod(); 
+        $period = LaporanController::getCurrentPeriod($tglakhir); 
         return view('laporan.print_pertanggal',compact('printtanggal','period','atasan'));
         
    }    
 
-    public function getCurrentPeriod()
+    public function getCurrentPeriod($tglakhir)
     {
-        $month = date('m');
-        $year = date ('Y');
+        $date = strtotime($tglakhir);
+        $month = date('m',$date);
+        $year = date ('Y',$date);
         return LaporanController::$month_list[$month].'/'.$year;
         
     }

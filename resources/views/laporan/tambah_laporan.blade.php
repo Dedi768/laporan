@@ -23,9 +23,7 @@
                     <div class="form-group">
                         <label for="tanggal">Tanggal</label>
                         {{-- <input type="text" class="form-control" id="tanggal" name="tanggal" --}}
-                        <input type="text" class="datepicker-here form control" date-language='en' name="tanggal"
-                            data-multiple-dates="3" data-multiple-dates-separator=", " data-position='top left'
-                            value="{{ old('tanggal') }}" placeholder="Masukkan Tanggal">
+                        <input type="date"autocomplete="off" name="tanggal" id="tanggal" class="form-control" />
 
 
                     </div>

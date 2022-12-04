@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="{{ asset('/fontawesome-free/css/all.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/adminlte.min.css?v=3.2.0') }}">
-    <link rel="stylesheet" href="{{ asset('css\datepicker.css') }}">
-    <link rel="stylesheet" type="text/css" href="css\bootstrap.css">
+    <link rel="stylesheet" href="{{ asset('css/datepicker.css') }}">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <script nonce="06146e89-4810-4a50-846d-d253073e7363">
         (function(w, d) {
             ! function(a, e, t, r) {
@@ -203,7 +203,7 @@
 
     <script src="{{ asset('js/demo.js') }}"></script>
 
-    <script src="{{ asset('js\datepicker.js') }}"></script>
+    <script src="{{ asset('js/datepicker.js') }}"></script>
 
     
 </body>
